@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishek | Portfolio</title>
+  <style>
+    body { margin: 0; font-family: Arial, sans-serif; background: #f8fafc; color: #1e293b; }
+    header { position: fixed; top: 0; left: 0; right: 0; background: #1e293b; color: white; padding: 15px 40px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
+    header nav a { margin-left: 20px; color: white; text-decoration: none; }
+    header nav a:hover { color: #fb923c; }
+    .hero { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+    .hero h1 { font-size: 3rem; margin-bottom: 15px; }
+    .hero p { font-size: 1.5rem; color: #fb923c; min-height: 30px; transition: opacity 0.5s ease; }
+    .btn { display: inline-block; margin: 10px; padding: 10px 20px; border-radius: 6px; text-decoration: none; font-weight: bold; }
+    .btn-primary { background: #fb923c; color: white; }
+    .btn-primary:hover { background: #ea580c; }
+    .btn-outline { border: 2px solid #fb923c; color: #fb923c; }
+    .btn-outline:hover { background: #fb923c; color: white; }
+    section { padding: 80px 40px; max-width: 1000px; margin: auto; }
+    #about { display: flex; flex-wrap: wrap; align-items: center; gap: 30px; }
+    #about img { width: 180px; height: 180px; border-radius: 50%; box-shadow: 0 4px 10px rgba(0,0,0,0.2); }
+    #projects .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+    .card { background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .card:hover { transform: scale(1.05); }
+    .card h3 { margin-top: 0; }
+    #contact form { display: grid; gap: 15px; max-width: 500px; }
+    input, textarea { padding: 10px; border: 1px solid #ccc; border-radius: 6px; }
+    button { background: #fb923c; color: white; border: none; padding: 10px; border-radius: 6px; cursor: pointer; }
+    button:hover { background: #ea580c; }
+    footer { text-align: center; background: #1e293b; color: white; padding: 20px; margin-top: 40px; }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Abhishek</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a href="resume.pdf" class="btn btn-primary">Resume</a>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <h1>Hi, I'm Abhishek</h1>
+    <p id="skill-text">Full-Stack Developer</p>
+    <div>
+      <a href="#projects" class="btn btn-primary">View My Work</a>
+      <a href="#contact" class="btn btn-outline">Let's Build Something</a>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <img src="profile.jpg" alt="Abhishek">
+    <p>
+      Hey there! I'm Abhishek – a passionate full-stack developer who loves turning wild ideas into pixel-perfect reality. Currently crushing my BTech (Class of 2026)...
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Things I've Built</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Project 1</h3>
+        <p>Brief description of Project 1.</p>
+        <a href="#">GitHub</a> | <a href="#">Live Demo</a>
+      </div>
+      <div class="card">
+        <h3>Project 2</h3>
+        <p>Brief description of Project 2.</p>
+        <a href="#">GitHub</a> | <a href="#">Live Demo</a>
+      </div>
+      <div class="card">
+        <h3>Project 3</h3>
+        <p>Brief description of Project 3.</p>
+        <a href="#">GitHub</a> | <a href="#">Live Demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Let's Create Together</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div style="margin-top:20px;">
+      <p>Email: <a href="mailto:abhishekms167@gmail.com">abhishekms167@gmail.com</a></p>
+      <p>GitHub: <a href="https://github.com/abhishek162004">github.com/abhishek162004</a></p>
+      <p>LinkedIn: <a href="#">LinkedIn Profile</a></p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Abhishek. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const skills = ["Full-Stack Developer", "Problem Solver", "UI/UX Enthusiast"];
+    let index = 0;
+    setInterval(() => {
+      index = (index + 1) % skills.length;
+      document.getElementById("skill-text").textContent = skills[index];
+    }, 2000);
+  </script>
+
+</body>
+</html>
